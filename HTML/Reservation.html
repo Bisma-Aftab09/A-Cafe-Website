@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paris Patisserie - Reservations</title>
+  <link rel="stylesheet" href="../CSS/reservation.css">
+</head>
+<body>
+  <!-- Header Section with Navigation -->
+  <header>
+    <div class="logo">
+     <img src="../CSS/Images/logo.png" alt="Paris Patisserie Logo">
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="Paris Patisserie.html">Home</a></li>
+        <li><a href="Paris Patisserie.html#about">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="Paris Patisserie.html#faq">FAQ</a></li>
+         <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Mobile Navigation (hidden by default) -->
+    <nav id="mobileNav" class="mobile-nav">
+      <ul>
+        <li><a href="Paris Patisserie.html">Home</a></li>
+        <li><a href="Paris Patisserie.html#about">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="Paris Patisserie.html#faq">FAQ</a></li>
+         <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO IMAGE SECTION -->
+  <div class="reservation-hero-image">
+    <img src="../CSS/Images/location.jpg" alt="Elegant Parisian Cafe Interior">
+      <div class="hero-text">
+    <span class="hero-text-line">Reservation</span>
+    <span class="hero-text-line">Réservation</span>
+    <span class="hero-text-line">予約</span>
+  </div>
+  <div class="gradient-overlay"></div>
+
+  </div>
+
+  <!-- Reservation Container -->
+  <div class="reservation-container">
+    <!-- Page Title -->
+    <h1 class="page-title">Reserve Your Table</h1>
+    
+    <!-- Reservation Intro -->
+    <div class="reservation-intro">
+      <p>Experience the authentic taste of Paris in our charming patisserie. Reserve your table for an unforgettable culinary journey through French delicacies and warm hospitality.</p>
+    </div>
+
+    <!-- Reservation Form Section -->
+    <div class="reservation-form-section">
+      <div class="form-container">
+        <h2 class="form-title">Make a Reservation</h2>
+        
+        <form class="reservation-form" id="reservationForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="guests">Number of Guests *</label>
+              <select id="guests" name="guests" required>
+                <option value="">Select guests</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6 People</option>
+                <option value="7">7+ People (Please call)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Reservation Date *</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="time">Preferred Time *</label>
+              <select id="time" name="time" required>
+                <option value="">Select time</option>
+                <option value="08:00">8:00 AM</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="18:00">6:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="special-requests">Special Requests</label>
+            <textarea id="special-requests" name="special-requests" rows="4" placeholder="Any dietary restrictions, celebrations, or special arrangements..."></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="submit-btn">Reserve Now</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Reservation Info Sidebar -->
+      <div class="reservation-info">
+        <div class="info-card">
+          <h3>Opening Hours</h3>
+          <div class="hours-list">
+            <div class="hour-item">
+              <span class="day">Monday - Friday</span>
+              <span class="time">7:00 AM - 8:00 PM</span>
+            </div>
+            <div class="hour-item">
+              <span class="day">Saturday</span>
+              <span class="time">8:00 AM - 9:00 PM</span>
+            </div>
+            <div class="hour-item">
+              <span class="day">Sunday</span>
+              <span class="time">8:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Contact Information</h3>
+          <div class="contact-info">
+            <p>📍 123 Rue de la Patisserie, Paris</p>
+            <p>📞 +1 (555) 123-4567</p>
+            <p>✉️ bonjour@parispatisserie.com</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Reservation Policy</h3>
+          <ul class="policy-list">
+            <li>Reservations held for 15 minutes past booking time</li>
+            <li>24-hour cancellation notice required</li>
+            <li>Groups of 7+ please call for availability</li>
+            <li>Special dietary needs accommodated with advance notice</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Information Section -->
+<div class="additional-info">
+  <div class="info-grid">
+    <div class="info-item">
+      <div class="info-icon">
+        <img src="../CSS/Images/celebration.jpg" alt="Celebration">
+      </div>
+      <h3>Celebrations</h3>
+      <p>Birthdays, anniversaries, or special occasions - let us make your celebration unforgettable with custom cakes and special arrangements.</p>
+    </div>
+    
+    <div class="info-item">
+      <div class="info-icon">
+        <img src="../CSS/Images/business.jpg" alt="Business Meeting">
+      </div>
+      <h3>Private Events</h3>
+      <p>Host your next business meeting or private gathering in our elegant space. Contact us for group reservations and event planning.</p>
+    </div>
+    
+    <div class="info-item">
+      <div class="info-icon">
+        <img src="../CSS/Images/hangouts.jpg" alt="Parking">
+      </div>
+      <h3>Hangouts</h3>
+      <p>Enjoy time with your friends and avail those extra student discounts.</p>
+    </div>
+  </div>
+</div>
+ </div>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 La Cafe de Paris. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="../Java Script/Reservation.js"></script>
+</body>
+</html>

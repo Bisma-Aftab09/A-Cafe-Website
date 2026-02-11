@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paris Patisserie - Order for Pickup</title>
+  <link rel="stylesheet" href="../CSS/pickup.css">
+</head>
+<body>
+  <!-- Header Section with Navigation -->
+  <header>
+    <div class="logo">
+     <img src="../CSS/Images/logo.png" alt="Paris Patisserie Logo">
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="Paris Patisserie.html">Home</a></li>
+        <li><a href="Paris Patisserie.html#about">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="Paris Patisserie.html#faq">FAQ</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Mobile Navigation (hidden by default) -->
+    <nav id="mobileNav" class="mobile-nav">
+      <ul>
+        <li><a href="Paris Patisserie.html">Home</a></li>
+        <li><a href="Paris Patisserie.html#about">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="Paris Patisserie.html#faq">FAQ</a></li>
+         <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO IMAGE SECTION -->
+  <div class="pickup-hero-image">
+    <img src="../CSS/Images/pickup.webp" alt="Fresh Pastries from Our Kitchen">
+    <div class="hero-text">
+      <span class="hero-text-line">Pick Up</span>
+      <span class="hero-text-line">À Emporter</span>
+      <span class="hero-text-line">持ち帰り</span>
+    </div>
+    <div class="gradient-overlay"></div>
+  </div>
+
+  <!-- Pick Up Container -->
+  <div class="pickup-container">
+    <!-- Page Title -->
+    <h1 class="page-title">Order for Pickup</h1>
+    
+    <!-- Pick Up Intro -->
+    <div class="pickup-intro">
+      <p>Fresh from our oven to your hands. Place your order now and pick up at your convenience. Everything baked fresh daily.</p>
+    </div>
+
+    <!-- Main Ordering Section -->
+    <div class="ordering-section">
+      <!-- Customer Info -->
+      <div class="customer-info-card">
+        <h2 class="form-title">Pickup Details</h2>
+        <form class="customer-form" id="customerForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pickup-name">Full Name *</label>
+              <input type="text" id="pickup-name" name="pickup-name" required>
+            </div>
+            <div class="form-group">
+              <label for="pickup-phone">Phone Number *</label>
+              <input type="tel" id="pickup-phone" name="pickup-phone" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pickup-date">Pickup Date *</label>
+              <input type="date" id="pickup-date" name="pickup-date" required>
+            </div>
+            <div class="form-group">
+              <label for="pickup-time">Pickup Time *</label>
+              <select id="pickup-time" name="pickup-time" required>
+                <option value="">Select time</option>
+                <option value="07:00">7:00 AM</option>
+                <option value="08:00">8:00 AM</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Clean Ordering Layout -->
+      <div class="clean-ordering-layout">
+        <!-- Categories Sidebar -->
+        <div class="categories-sidebar">
+          <div class="category active" data-category="all">All Items</div>
+          <div class="category" data-category="french">French Classics</div>
+          <div class="category" data-category="japanese">Japanese Fusion</div>
+          <div class="category" data-category="seasonal">Seasonal Specials</div>
+          <div class="category" data-category="desserts">Pastries & Desserts</div>
+          <div class="category" data-category="beverages">Beverages</div>
+        </div>
+
+        <!-- Menu Items Section -->
+        <div class="menu-items-section">
+          <h3 class="category-title">All Items</h3>
+          <div class="menu-items-list" id="menuItemsList">
+            <!-- Items populated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Cart Sidebar -->
+        <div class="cart-sidebar">
+          <div class="cart-header">
+            <h3>Your Order</h3>
+            <span class="cart-count">0 items</span>
+          </div>
+          
+          <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+              <p>Your cart is empty</p>
+              <p class="cart-hint">Add items from the menu</p>
+            </div>
+          </div>
+          
+          <div class="cart-totals">
+            <div class="total-line grand-total">
+              <span>Total:</span>
+              <span id="grandTotal">$0.00</span>
+            </div>
+          </div>
+          
+          <div class="cart-actions">
+            <button class="checkout-btn" id="checkoutBtn" disabled>Place Order</button>
+            <button class="clear-cart-btn" id="clearCartBtn">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pickup Information -->
+    <div class="pickup-info-section">
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>🕐 Pickup Hours</h3>
+          <div class="hours-list">
+            <div class="hour-item">
+              <span class="day">Monday - Friday</span>
+              <span class="time">7:00 AM - 7:00 PM</span>
+            </div>
+            <div class="hour-item">
+              <span class="day">Saturday</span>
+              <span class="time">8:00 AM - 8:00 PM</span>
+            </div>
+            <div class="hour-item">
+              <span class="day">Sunday</span>
+              <span class="time">8:00 AM - 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>⭐ Freshness Guarantee</h3>
+          <ul class="policy-list">
+            <li>All items baked fresh daily</li>
+            <li>Prepared within 15 minutes of pickup</li>
+            <li>Special packaging to maintain quality</li>
+            <li>24-hour notice for large orders</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>📞 Contact-Free Pickup</h3>
+          <div class="contact-info">
+            <p>📍 Curbside pickup available</p>
+            <p>📞 Call upon arrival</p>
+            <p>⏱️ Ready in 2-5 minutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 La Cafe de Paris. All rights reserved.</p>
+  </footer>
+
+  <script src="../Java Script/JSpickup.js"></script>
+</body>
+</html>

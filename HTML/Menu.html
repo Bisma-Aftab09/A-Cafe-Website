@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paris Patisserie - Menu</title>
+  <link rel="stylesheet" href="../CSS/menu.css">
+</head>
+<body>
+  <!-- Header Section with Navigation -->
+  <header>
+    <div class="logo">
+     <img src="../CSS/Images/logo.png" alt="Paris Patisserie Logo">
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="Paris Patisserie.html">Home</a></li>
+        <li><a href="Paris Patisserie.html#about">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="Paris Patisserie.html#faq">FAQ</a></li>
+         <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Mobile Navigation (hidden by default) -->
+    <nav id="mobileNav" class="mobile-nav">
+      <ul>
+      <li><a href="Paris Patisserie.html">Home</a></li>
+        <li><a href="Paris Patisserie.html#about">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="Paris Patisserie.html#faq">FAQ</a></li>
+         <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+</header>
+
+<!-- HERO IMAGE SECTION -->
+<div class="menu-hero-image">
+  <img src="../CSS/Images/floral.jpg" alt="Paris Patisserie Hero">
+</div>
+
+    
+
+  <!-- Main Content Container -->
+  <div class="menu-container">
+    <!-- Page Title -->
+    <h1 class="page-title">Our Menu</h1>
+    
+    <!-- Menu Navigation Buttons -->
+    <div class="menu-nav">
+      <button class="menu-nav-btn" onclick="scrollToSection('seasonal')">Seasonal</button>
+      <button class="menu-nav-btn" onclick="scrollToSection('special')">Specials</button>
+      <button class="menu-nav-btn" onclick="scrollToSection('dessert')">Dessert</button>
+      <button class="menu-nav-btn" onclick="scrollToSection('savoury')">Savory</button>
+      <button class="menu-nav-btn" onclick="scrollToSection('drinks')">Beverages</button>
+    </div>
+    
+    <!-- Seasonal Section -->
+    <h2 class="section-title" id="seasonal">Seasonal Favorites</h2>
+    
+    <!-- Seasonal Items Grid -->
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src=" ../CSS/Images/Menu/Seasonal1.jpg " class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Kuma-chan's Sweet Potato Caramel Parfait</h3>
+          <p class="menu-item-price">$5.50</p>
+          <p class="menu-item-desc">A cozy, dessert-cup delight layered with silky sweet-potato cream, fluffy whipped topping, and a warm drizzle of golden caramel.</p>
+        </div>
+      </div>
+      
+        <div class="menu-item">
+        <img src="../CSS/Images/Menu/Seasonal3.jpg" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Snowman Raspberry Tea Latte</h3>
+          <p class="menu-item-price">$5.25</p>
+          <p class="menu-item-desc">A whimsically cozy latte made with smooth raspberry-infused tea, steamed milk, and a touch of sweetness. Topped with a quirky snowman-shaped foam swirl, it’s charming, a little strange, and delightfully comforting in every sip.</p>
+        </div>
+      </div>
+    
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/Seasonal2.jpg" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Spicy Strawberry Chai Tea</h3>
+          <p class="menu-item-price">$3.75</p>
+          <p class="menu-item-desc">A bold fusion of warm chai spices and sweet-tart strawberry bliss. This fragrant tea brings a cozy heat with a fruity twist, creating a cup that’s both comforting and refreshingly vibrant.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Specials Section -->
+    <h2 class="section-title" id="special">Weekly Specials</h2>
+    
+    <!-- Specials Media Section (Image + Text side by side) -->
+    <div class="media-section">
+      <div class="media-image">
+        <img src="../CSS/Images/Special.jpg">
+      </div>
+      <div class="media-content">
+        <h3 class="media-title">Make-ahead berry souffles</h3>
+        <p class="media-price">$8.50</p>
+        <p>Indulge in our exquisite Make-Ahead Berry Soufflés - a delightful harmony of fresh seasonal berries baked into airy, cloud-like perfection. These elegant soufflés feature a medley of raspberries, blueberries, and blackberries folded into a delicate custard base, creating a burst of fruity flavor in every spoonful. Perfectly prepared in advance for your convenience, they maintain their spectacular rise and velvety texture until ready to serve. A showstopping dessert that brings restaurant-quality sophistication to your table with effortless elegance</p>
+        
+      </div>
+    </div>
+    
+    <!-- Dessert Section -->
+    <h2 class="section-title" id="dessert">Desserts</h2>
+    
+    <!-- Desserts Grid -->
+    <div class="menu-grid">
+      <!-- Chocolate Cake -->
+      
+     
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/D2.WEBP" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Saku Straw Macrons</h3>
+          <p class="menu-item-price">$7.25</p>
+          <p class="menu-item-desc">Delicate, pastel-pink macarons infused with the gentle floral aroma of cherry blossoms. Lightly crisp on the outside and soft within, they offer a sweet, elegant bite that feels like a taste of spring.<p>
+        </div>
+      </div>
+      
+    <div class="menu-item">
+        <img src="../CSS/Images/Menu/D1.WEBP" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Banana & Chocolate Custard</h3>
+          <p class="menu-item-price">$6.50</p>
+          <p class="menu-item-desc">A rich and creamy treat blending smooth chocolate custard with sweet, ripe banana. Each spoonful is silky, comforting, and perfectly balanced—like a warm, nostalgic dessert with a deliciously indulgent twist.</p>
+        </div>
+      </div>
+      
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/D3.WEBP" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Matcha Floral Mont Blanc</h3>
+          <p class="menu-item-price">$6.75</p>
+          <p class="menu-item-desc">A spring-inspired twist on the classic Mont Blanc, featuring soft sponge cake topped with airy sakura-flavored cream and delicate chestnut purée. Light, floral, and beautifully elegant—each bite feels like a gentle cherry blossom breeze.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Savory Section -->
+    <h2 class="section-title" id="savoury">Savory Delights</h2>
+    
+    <!-- Savory Grid -->
+    <div class="menu-grid">
+     
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/S1.jpg" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">French Bistro Salad</h3>
+          <p class="menu-item-price">$8.25</p>
+          <p class="menu-item-desc">A fresh, vibrant mix of crisp greens, cherry tomatoes, olives, and a classic tangy vinaigrette—simple, light, and perfectly Parisian.</p>
+        </div>
+      </div>
+      
+   
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/S2.jpg" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Croissant French Toast</h3>
+          <p class="menu-item-price">$9.50</p>
+          <p class="menu-item-desc">Flaky, buttery croissants soaked in a sweet custard and cooked to golden perfection. Soft inside, crisp outside, and irresistibly decadent.</p>
+        </div>
+      </div>
+      
+      
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/S3.WEBP" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Pissaladière</h3>
+          <p class="menu-item-price">$10.75</p>
+          <p class="menu-item-desc">A traditional Provençal flatbread topped with caramelized onions, anchovies, and olives. Savory, aromatic, and full of classic flavor.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Beverages Section -->
+    <h2 class="section-title" id="drinks">Beverages</h2>
+    
+    <!-- Beverages Media Section -->
+    <div class="media-section">
+      <div class="media-content">
+        <h3 class="media-title">Japanese Denny’s Parfait</h3>
+        <p class="media-price">$4.75</p>
+        <p>A classic Japanese-style parfait inspired by Denny’s iconic dessert—layered with soft-serve ice cream, fresh fruit, sweet syrup, crunchy cornflakes, and fluffy whipped cream. Light, colorful, and perfectly sweet, it’s a delightful treat with every layer.</p>
+     
+      </div>
+      <div class="media-image">
+        <img src="../CSS/Images/Menu/BA.jpg">
+      </div>
+    </div>
+    
+    <!-- Additional Beverages Grid -->
+    <div class="menu-grid">
+      <!-- Matcha Latte -->
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/dd1.jpg" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Hot Chocolate</h3>
+          <p class="menu-item-price">$5.25</p>
+          <p class="menu-item-desc">A warm, velvety drink made with rich melted chocolate and steamed milk—comforting, smooth, and perfect for cold days.</p>
+        </div>
+      </div>
+      
+      <!-- Chai Tea -->
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/dd2.png" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Afternoon Chai Tea</h3>
+          <p class="menu-item-price">$4.50</p>
+          <p class="menu-item-desc">A classic, elegant tea service featuring fragrant brewed tea enjoyed with small pastries, sandwiches, and sweets for a relaxing midday treat.</p>
+          <p class="menu-item-desc"></p>
+        </div>
+      </div>
+      
+      <!-- Fresh Juice -->
+      <div class="menu-item">
+        <img src="../CSS/Images/Menu/dd3.jpg" class="menu-item-image">
+        <div class="menu-item-content">
+          <h3 class="menu-item-title">Pumpkin Spice Latte</h3>
+          <p class="menu-item-price">$6.75</p>
+          <p class="menu-item-desc">A creamy espresso drink blended with cozy pumpkin spice flavors—cinnamon, nutmeg, and clove—bringing all the warmth of autumn in one cup.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+<footer class="footer">
+  <p>&copy; 2025 La Cafe de Paris. All rights reserved.</p>
+</footer>
+
+  <!-- JavaScript File -->
+  <script src="../Java Script/JSMenu.js"></script>
+</body>
+</html>
