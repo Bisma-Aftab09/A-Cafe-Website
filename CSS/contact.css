@@ -1,0 +1,471 @@
+/* =========================
+   GLOBAL RESET & FONTS
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Monsieur La Doulaise';
+  src: url('../CSS/Fonts/MonsieurLaDoulaise-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Tangerine';
+  src: url('../CSS/Fonts/Tangerine-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('../CSS/Fonts/PT_Serif-Regular.ttf') format('truetype');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'PT Serif', serif;
+  background-color: #fefefe;
+  background-image: url('../CSS/Images/Background.png');
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER & NAVIGATION
+   ========================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(80px, 8vh, 100px);
+  padding: clamp(0px, 2vw, 50px);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  width: clamp(35px, 4vw, 52px);
+  height: auto;
+  display: block;
+  filter: brightness(0.8);
+}
+
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav ul li {
+  height: 80px;
+}
+
+.desktop-nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #2c2c2c;
+  font-weight: 500;
+  padding: 0 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-family: 'PT Serif', serif;
+  letter-spacing: 0.5px;
+}
+
+.desktop-nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(135deg, #8B7355, #A52A2A);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.desktop-nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+.desktop-nav ul li a:hover {
+  color: #8B7355;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.hamburger:hover {
+  background-color: rgba(139, 115, 85, 0.1);
+}
+
+.hamburger span {
+  width: 25px;
+  height: 1.5px;
+  background: #2c2c2c;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 1px;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+  z-index: 999;
+  border-top: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.mobile-nav.show {
+  display: block;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.mobile-nav li {
+  margin-bottom: 5px;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 15px 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #2c2c2c;
+  transition: all 0.3s;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  font-family: 'PT Serif', serif;
+}
+
+.mobile-nav a:hover {
+  background: rgba(139, 115, 85, 0.08);
+  color: #8B7355;
+  border-left-color: #8B7355;
+  transform: translateX(5px);
+}
+
+/* =========================
+   CONTACT PAGE STYLES
+   ========================= */
+.contact-container {
+  max-width: 1400px;
+  margin: 100px auto 60px;
+  padding: 40px 30px;
+  background: transparent;
+  
+  
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-title {
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 4.5rem;
+  color: #2c2c2c;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+}
+
+/* Contact Info Sidebar */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.info-card h3 {
+  font-family: 'Tangerine', cursive;
+  font-size: 2.5rem;
+  color: #8B7355;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.location, .hours {
+  margin-bottom: 20px;
+}
+
+.location h4 {
+  color: #2c2c2c;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.location p, .hours p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+/* Feedback Form */
+.feedback-section {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.feedback-card h2 {
+  font-family: 'Tangerine', cursive;
+  font-size: 3rem;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.feedback-card > p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c2c2c;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1.5px solid rgba(139, 115, 85, 0.2);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'PT Serif', serif;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8B7355;
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background: #8B7355;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'PT Serif', serif;
+}
+
+.submit-btn:hover {
+  background: #A52A2A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 115, 85, 0.3);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.simple-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 60px;
+  width: 100%;
+  font-family: 'PT Serif', serif;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+@media (max-width: 1200px) {
+  .contact-layout {
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-container {
+    margin: 80px auto 40px;
+    padding: 30px 20px;
+  }
+  
+  .page-title {
+    font-size: 3.5rem;
+  }
+  
+  .feedback-section {
+    padding: 30px;
+  }
+  
+  .info-card {
+    padding: 25px;
+  }
+  
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    margin: 70px auto 30px;
+    padding: 25px 15px;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+  }
+  
+  .feedback-section {
+    padding: 20px;
+  }
+  
+  .info-card {
+    padding: 20px;
+  }
+  
+  .info-card h3 {
+    font-size: 2.2rem;
+  }
+  
+  .feedback-card h2 {
+    font-size: 2.5rem;
+  }
+}
